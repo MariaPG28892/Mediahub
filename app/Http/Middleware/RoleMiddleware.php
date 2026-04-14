@@ -11,7 +11,7 @@ class RoleMiddleware
     public function handle(Request $request, Closure $next, $roles)
     {
         if (!Auth::check()) {
-            return redirect()->route('login');
+            abort(401);
         }
         
         $rolesArray = preg_split('/[|,]/', $roles);

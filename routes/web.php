@@ -15,33 +15,18 @@ use App\Http\Controllers\VideojuegoController;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| GUEST (NO autenticados)
-|--------------------------------------------------------------------------
-*/
-Route::middleware('guest')->group(function () {
-
+    /*No autenticados*/
     // Redirigir raíz al login
     Route::get('/', function () {
         return redirect()->route('login');
     });
-
     Route::view('/login', 'login.login')->name('login');
     Route::view('/registro', 'login.registro')->name('registro');
-
-    // Auth actions
     Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar_registro');
-
     Route::post('/iniciar-sesion', [LoginController::class, 'login'])->name('iniciar_sesion');
-});
 
-    /*
-    |--------------------------------------------------------------------------
-    | DASHBOARDS POR ROL
-    |--------------------------------------------------------------------------
-    */
 
+    /* Administrador*/
     Route::middleware('role:admin')->group(function () {
         Route::get('/admin', [AdminController::class, 'index'])->name('admin_index');
         Route::get('/admin/datos-usuarios', [AdminController::class, 'indexDataTable'])->name('admin_index_data_table');
@@ -56,6 +41,7 @@ Route::middleware('guest')->group(function () {
         Route::get('/admin/gestionar-resena/videojuegos', [GestorController::class, 'videojuegos'])->name('admin_videojuegos');
     });
 
+    /* Gestor */
     Route::middleware('role:gestor')->group(function () {
         
         Route::get('/gestor', [GestorController::class, 'index'])->name('gestor_index');
@@ -68,6 +54,7 @@ Route::middleware('guest')->group(function () {
         Route::post('/gestor/desbloquear-usuario/{id}', [GestorController::class, 'desbloquearUsuario'])->name('gestor_desbloquear_usuario');
     });
 
+    /* Usuarios autenticados */
     Route::middleware(['auth'])->group(function () {
 
         //INICIO
@@ -132,6 +119,7 @@ Route::middleware('guest')->group(function () {
 
     });
 
+    /*Rutas para admin y gestor compartidas*/
     Route::middleware(['auth', 'role:admin|gestor'])->group(function () {
 
         // PELÍCULAS
@@ -153,9 +141,5 @@ Route::middleware('guest')->group(function () {
         Route::post('/contenido/mostrar', [GestorController::class, 'mostrarContenido'])->name('contenido_mostrar');
     });
 
-    /*
-    |--------------------------------------------------------------------------
-    | LOGOUT
-    |--------------------------------------------------------------------------
-    */
+    /*logout*/
     Route::post('/logout', [LoginController::class, 'logout'])->name('cerrar_sesion');
