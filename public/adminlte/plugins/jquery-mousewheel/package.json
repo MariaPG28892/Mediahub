@@ -1,0 +1,89 @@
+{
+  "_from": "jquery-mousewheel@^3.1.13",
+  "_id": "jquery-mousewheel@3.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-JP71xTAg08ZY3hcs9ZbYUZ5i+dkSsz4yRl/zpWkAmtzc+kMs5EfPkpkINSidiLYMaR0MTo3DfFGF9WIezMsFQQ==",
+  "_location": "/jquery-mousewheel",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "jquery-mousewheel@^3.1.13",
+    "name": "jquery-mousewheel",
+    "escapedName": "jquery-mousewheel",
+    "rawSpec": "^3.1.13",
+    "saveSpec": null,
+    "fetchSpec": "^3.1.13"
+  },
+  "_requiredBy": [
+    "/admin-lte",
+    "/jquery-mapael"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-mousewheel/-/jquery-mousewheel-3.2.2.tgz",
+  "_shasum": "48c833f6260ee0c46d438a999e7d0060ec9eed0b",
+  "_spec": "jquery-mousewheel@^3.1.13",
+  "_where": "C:\\laragon\\www\\beklub\\node_modules\\admin-lte",
+  "author": {
+    "name": "jQuery Foundation and other contributors",
+    "url": "https://github.com/jquery/jquery-mousewheel/blob/master/AUTHORS.txt"
+  },
+  "bugs": {
+    "url": "https://github.com/jquery/jquery-mousewheel/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "jquery": ">=1.2.6"
+  },
+  "deprecated": false,
+  "description": "A jQuery plugin that adds cross-browser mouse wheel support.",
+  "devDependencies": {
+    "@swc/core": "^1.11.8",
+    "eslint": "9.22.0",
+    "eslint-config-jquery": "3.0.2",
+    "globals": "^16.0.0",
+    "jquery-test-runner": "0.2.6",
+    "qunit": "2.24.1",
+    "requirejs": "2.3.7"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "ChangeLog.md",
+    "jquery.mousewheel.js",
+    "jquery.mousewheel.min.js",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "homepage": "https://github.com/jquery/jquery-mousewheel",
+  "keywords": [
+    "jquery",
+    "mouse",
+    "wheel",
+    "event",
+    "mousewheel",
+    "jquery-plugin",
+    "browser"
+  ],
+  "license": "MIT",
+  "main": "./jquery.mousewheel.js",
+  "name": "jquery-mousewheel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jquery/jquery-mousewheel.git"
+  },
+  "scripts": {
+    "build": "npm run minify",
+    "lint": "eslint .",
+    "minify": "node --input-type=module -e \"import { minify } from './build/minify.mjs'; minify( { dir: '.', filename: 'jquery.mousewheel.js' } )\"",
+    "test": "npm run build && npm run lint && npm run test:browser",
+    "test:browser": "npm run build && npm run test:unit -- -b chrome -b firefox --headless",
+    "test:chrome": "npm run build && npm run test:unit -- -v -b chrome --headless",
+    "test:edge": "npm run build && npm run test:unit -- -v -b edge --headless",
+    "test:firefox": "npm run build && npm run test:unit -- -v -b firefox --headless",
+    "test:ie": "npm run build && npm run test:unit -- -v -b ie",
+    "test:safari": "npm run build && npm run test:unit -- -b safari",
+    "test:unit": "jtr"
+  },
+  "version": "3.2.2"
+}

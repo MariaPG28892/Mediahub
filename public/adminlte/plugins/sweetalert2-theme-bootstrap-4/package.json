@@ -1,0 +1,54 @@
+{
+  "_from": "@sweetalert2/theme-bootstrap-4@^5.0.8",
+  "_id": "@sweetalert2/theme-bootstrap-4@5.0.27",
+  "_inBundle": false,
+  "_integrity": "sha512-xFerQrL6jfX8PXwkKCvDCcLvaBfUpqGjO79uAcWZPdMIwI3pjRyN7o8pZuxy3Krlqr7Av2NyLpwzhrDTG0d8FA==",
+  "_location": "/@sweetalert2/theme-bootstrap-4",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@sweetalert2/theme-bootstrap-4@^5.0.8",
+    "name": "@sweetalert2/theme-bootstrap-4",
+    "escapedName": "@sweetalert2%2ftheme-bootstrap-4",
+    "scope": "@sweetalert2",
+    "rawSpec": "^5.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^5.0.8"
+  },
+  "_requiredBy": [
+    "/admin-lte"
+  ],
+  "_resolved": "https://registry.npmjs.org/@sweetalert2/theme-bootstrap-4/-/theme-bootstrap-4-5.0.27.tgz",
+  "_shasum": "63aaeef04f0feadb8efdec4ec903b4b723082947",
+  "_spec": "@sweetalert2/theme-bootstrap-4@^5.0.8",
+  "_where": "C:\\laragon\\www\\beklub\\node_modules\\admin-lte",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/sweetalert2/sweetalert2-themes/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Bootstrap 4 theme for SweetAlert2",
+  "files": [
+    "*.css",
+    "*.scss"
+  ],
+  "homepage": "https://sweetalert2.github.io/",
+  "keywords": [
+    "sweetalert2",
+    "bootstrap-4",
+    "theme",
+    "themes",
+    "theming",
+    "sass"
+  ],
+  "license": "MIT",
+  "main": "bootstrap-4.css",
+  "name": "@sweetalert2/theme-bootstrap-4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweetalert2/sweetalert2-themes.git"
+  },
+  "version": "5.0.27"
+}

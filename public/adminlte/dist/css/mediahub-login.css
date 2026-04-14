@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* fondo general */
+.mediahub-login-body {
+    background: radial-gradient(circle at top, #0a0a1a, #000000 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-logo {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.register-logo b {
+    font-size: 44px;
+    color: #00f6ff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px #00f6ff;
+}
+
+.arcade-subtitle {
+    color: #ff00ff;
+    font-size: 11px;
+    letter-spacing: 6px;
+    margin-top: 6px;
+}
+
+.mensaje-login{
+    color: #00f6ff;
+    font-size: 14px;
+    letter-spacing: 6px;
+    margin-top: 6px;
+    text-shadow: 0 0 15px #00f6ff;
+}
+
+.mediahub-card {
+    width: 100%;
+    max-width: 460px; 
+    background: rgba(10,10,25,0.95);
+    border: 2px solid #ff00ff;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #ff00ff;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mediahub-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,0,255,0.08), transparent 60%);
+    animation: movimiento 6s linear infinite;
+    pointer-events: none;
+}
+
+.mediahub-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.mediahub-card.mediahub-card-register {
+    max-width: 750px !important;
+}
+
+.form-control {
+    background: #050510 !important;
+    border: 1px solid #00f6ff !important;
+    color: #fff !important;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+.mediahub-card:not(.mediahub-card-register) .form-control {
+    margin-bottom: 10px !important;
+}
+
+.mediahub-card.mediahub-card-register .form-control {
+    margin-bottom: 18px !important;
+}
+
+/* focus neon */
+.form-control:focus {
+    border-color: #ff00ff !important;
+    box-shadow: 0 0 10px #ff00ff !important;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff00ff, #00f6ff);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 0 18px #ff00ff;
+    transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 30px #00f6ff;
+}
+
+/* links */
+a {
+    color: #00f6ff;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+.alert-danger {
+    background: none;
+    border:none;
+    color: #ff4d00;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+@keyframes movimiento {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
