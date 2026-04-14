@@ -34,7 +34,7 @@ class LoginController extends Controller
         Auth::login($user);
         $request->session()->regenerate();
 
-        return redirect()->route('login')
+        return redirect()->route('inicio')
             ->with('mensaje', 'Registro completado con éxito');
     }
 
