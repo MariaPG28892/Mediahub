@@ -15,7 +15,13 @@
             <h2 style="color:#00ff88; margin:0;">
                 Moderar reseñas de videojuegos
             </h2>
-            <a href="{{ route('gestor_index') }}" class="gestor-atras">
+            {{--Según el rol te lleva a uno o a otro--}}
+            @php
+                $user = auth()->user();
+                $ruta = $user->role === 'admin' ? route('admin_index') : route('gestor_index');
+            @endphp
+
+            <a href="{{ $ruta }}" class="gestor-atras">
                 Volver al panel
             </a>
         </div>

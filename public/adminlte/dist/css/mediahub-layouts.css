@@ -113,6 +113,11 @@ section.content {
     width: 100%;
 }
 
+/*Para poder tener el navbar en responsive bien y que funcione también normal*/
+.navbar-menu {
+    display: contents; 
+}
+
 /*NAVBAR ACTIVE*/
 .nav-link.active {
     color: #ff00ff;
@@ -123,6 +128,13 @@ section.content {
     width: 100%;
     background: #ff00ff;
     box-shadow: 0 0 12px #ff00ff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: #00f7ff;
+    cursor: pointer;
 }
 
 .logout-btn {
@@ -141,68 +153,7 @@ section.content {
     text-shadow: 0 0 10px #ff00ff;
 }
 
-/*INICIO*/
-.arcade-selector {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 90px;
-    flex-wrap: wrap;
-}
-
-.arcade-opcion {
-    position: relative;
-    width: 320px;
-    height: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.65);
-    border: 1px solid #00f7ff;
-    border-radius: 22px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.35s ease;
-    box-shadow:
-        0 0 20px rgba(16, 191, 235, 0.881),
-        inset 0 0 20px rgba(0,0,0,0.4);
-    overflow: hidden;
-    cursor: pointer;
-    margin-top: 70px;
-}
-
-.arcade-opcion img {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-    filter:
-        drop-shadow(0 0 10px #00f7ff)
-        drop-shadow(0 0 25px #00f7ff);
-
-    transition: 0.35s ease;
-}
-
-.arcade-opcion h3 {
-    margin-top: 22px;
-    font-size: 26px;
-    letter-spacing: 2px;
-}
-
-.arcade-opcion:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow:
-        0 0 40px #ff00ff;
-    border-color: #00f7ff;
-}
-
-.arcade-opcion:hover img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 15px #ff00ff); 
-}
-
-/* ALERT */
+/* ALERTAS */
 .alert-neon {
     position: fixed;
     top: 20%;
@@ -270,7 +221,6 @@ section.content {
 }
 
 /* FOOTER */
-
 .pie-arcade {
     margin-top: auto;
     padding: 12px 20px; 
@@ -320,4 +270,57 @@ section.content {
     margin-top: 8px; 
     font-size: 11px;
     opacity: 0.6;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(0,247,255,0.2);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-centro,
+    .navbar-derecha {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-link,
+    .logout-btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+        display: block;
+        border-bottom: 1px solid rgba(0, 247, 255, 0.08);
+    }
+
+    .navbar-derecha form {
+        width: 100%;
+    }
+
+    .navbar-centro a:last-child,
+    .navbar-derecha form:last-child {
+        border-bottom: none;
+    }
 }

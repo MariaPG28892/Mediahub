@@ -11,6 +11,69 @@ body {
     padding-top: 30px;
 }
 
+/*INICIO*/
+.arcade-selector {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.arcade-opcion {
+    position: relative;
+    width: 320px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.65);
+    border: 1px solid #00f7ff;
+    border-radius: 22px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.35s ease;
+    box-shadow:
+        0 0 20px rgba(16, 191, 235, 0.881),
+        inset 0 0 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 70px;
+}
+
+.arcade-opcion img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 0 10px #00f7ff)
+        drop-shadow(0 0 25px #00f7ff);
+
+    transition: 0.35s ease;
+}
+
+.arcade-opcion h3 {
+    margin-top: 22px;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.arcade-opcion:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:
+        0 0 40px #ff00ff;
+    border-color: #00f7ff;
+}
+
+.arcade-opcion:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #ff00ff); 
+}
+
+/*CATÁLOGO*/
+
 /*Barra de búsqueda*/
 .barra-busqueda {
     width: 100%;
@@ -209,6 +272,7 @@ body {
 
 
 /* DETALLE PELÍCULA/SERIE/VIDEOJUEGO */
+
 .detalle-media-container {
     max-width: 1500px;
     margin: 40px auto;
@@ -592,40 +656,6 @@ body {
     padding: 20px;
 }
 
-/* Responsive */
-
-@media (max-width: 1400px) {
-    .grid-media {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
-
-@media (max-width: 1100px) {
-    .grid-media {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 800px) {
-    .grid-media {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .img-videojuego {
-        height: 200px;
-    }
-}
-
-@media (max-width: 500px) {
-    .grid-media {
-        grid-template-columns: 1fr;
-    }
-
-    .img-videojuego {
-        height: 220px;
-    }
-}
-
 /* Optimizacion para las fotos de videojuegos que son muy grandes*/
 .card-media img {
     backface-visibility: hidden;
@@ -656,7 +686,7 @@ body {
     align-items: center;
 }
 
-/* IZQUIERDA (foto + nombre) */
+/* IZQUIERDA */
 .usuario-info {
     display: flex;
     align-items: center;
@@ -693,4 +723,67 @@ body {
     display: block;
     margin-bottom: 5px;
     color: #ff00ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-media {
+        grid-template-columns: 1fr;
+    }
+
+    .arcade-selector {
+        margin-bottom: 20px;
+    }
+
+    .img-videojuego {
+        height: 220px;
+    }
+
+    .barra-busqueda {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-busqueda {
+        width: 100%;
+    }
+
+    .input-busqueda,
+    .select-genero {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .boton-busqueda {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .detalle-media-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .detalle-media-izquierda,
+    .detalle-media-right {
+        width: 100%;
+    }
+
+    .detalle-media-box {
+        width: 100%;
+    }
+
+    .detalle-media-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .detalle-media-poster img {
+        width: 100%;
+        height: auto;
+    }
+
+    .detalle-media-btn-primary {
+        margin-top: 15px;
+    }
 }

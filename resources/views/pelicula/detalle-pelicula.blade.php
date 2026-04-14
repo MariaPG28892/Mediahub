@@ -14,9 +14,7 @@
                     {{-- MOSTRAR --}}
                     <form method="POST" action="{{ route('pelicula_mostrar') }}">
                         @csrf
-
                         <input type="hidden" name="pelicula_id" value="{{ $pelicula['id'] }}">
-
                         <button class="gestor-boton">
                             Mostrar
                         </button>

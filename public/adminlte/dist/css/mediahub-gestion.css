@@ -291,6 +291,11 @@
     color: #000 !important;
 }
 
+.contenedor-tabla-gestor {
+    overflow-x: auto;
+    width: 100%;
+}
+
 .boton-csv-gestor {
     padding: 10px 16px !important;
     border-radius: 10px !important;
@@ -340,4 +345,16 @@
 .gestor-btn-azul:hover {
     transform: scale(1.05);
     box-shadow: 0 0 12px #00f7ff;
+}
+
+@media (max-width: 768px) {
+
+    .tabla-gestor {
+        width: 900px;
+    }
+
+    .contenedor-tabla-gestor {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }

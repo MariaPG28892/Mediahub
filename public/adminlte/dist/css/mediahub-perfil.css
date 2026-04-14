@@ -607,8 +607,56 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
     .perfil-editar-container {
         margin: 20px;
         padding: 18px;
     }
+
+    .perfil-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    .perfil-foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .perfil-foto img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .perfil-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .perfil-info a {
+        display: inline-block;
+    }
+
+    .btn-editar,
+    .btn-recomendaciones,
+    .btn-gestor,
+    .btn-admin {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .btn-gestor,
+    .btn-admin {
+        top: 250px;
+        width: 100%;
+        max-width: 260px;
+    }
+    
 }

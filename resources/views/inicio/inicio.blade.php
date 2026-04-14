@@ -3,8 +3,7 @@
 @section('title', 'Mediahub')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('adminlte/dist/css/mediahub-pelicula.css') }}">
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/bootstrap-datepicker/css/datepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('adminlte/dist/css/mediahub-secciones.css') }}">
 @endsection
 
 @section('content')

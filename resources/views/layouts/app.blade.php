@@ -6,8 +6,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@yield('title', 'MediaHub')</title>
         <link rel="icon" href="{{ Storage::url('favicon.ico') }}">
-         <link rel="stylesheet" href="{{ asset('adminlte/dist/css/mediahub-layouts.css') }}">
-          <link rel="stylesheet" href="{{ asset('adminlte/dist/css/mediahub-login.css') }}">
+        <link rel="stylesheet" href="{{ asset('adminlte/dist/css/mediahub-layouts.css') }}">
+        <link rel="stylesheet" href="{{ asset('adminlte/dist/css/mediahub-login.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         @yield('styles')
     </head>
