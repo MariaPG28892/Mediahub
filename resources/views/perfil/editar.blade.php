@@ -29,6 +29,9 @@
             <label>Nombre</label>
             <input type="text" name="name" value="{{ old('name', $usuario->name) }}">
 
+            <label>Fecha de nacimiento</label>
+            <input type="date" name="fecha_nacimiento" value="{{ old('fecha_nacimiento', $usuario->fecha_nacimiento) }}">
+
             <label>Email</label>
             <input type="email" name="email" value="{{ old('email', $usuario->email) }}">
 

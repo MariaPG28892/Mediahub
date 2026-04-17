@@ -21,32 +21,37 @@
                 <form action="{{ route('validar_registro') }}" method="POST">
                     @csrf
                     {{-- NOMBRE --}}
+                    <label for="name" class="resgistro-label">Nombre completo</label>
                     <input type="text" name="name" class="form-control" placeholder="Nombre completo" value="{{ old('name') }}" required>
                     @error('name')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     {{-- USUARIO --}}
+                    <label for="nombre_usuario" class="resgistro-label">Nombre de usuario</label>
                     <input type="text" name="nombre_usuario" class="form-control" placeholder="Nombre de usuario" value="{{ old('nombre_usuario') }}" required>
                     @error('nombre_usuario')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     {{-- FECHA --}}
+                    <label for="fecha_nacimiento" class="resgistro-label">Fecha de nacimiento</label>
                     <input type="date" name="fecha_nacimiento" class="form-control" value="{{ old('fecha_nacimiento') }}" required>
                     @error('fecha_nacimiento')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     {{-- EMAIL --}}
+                    <label for="email" class="resgistro-label">Email</label>
                     <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}" required>
-
                     @error('email')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     {{-- PASSWORD --}}
+                    <label for="password" class="resgistro-label">Contraseña</label>
                     <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
                     @error('password')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     {{-- CONFIRMAR --}}
+                    <label for="password_confirmation" class="resgistro-label">Confirmar contraseña</label>
                     <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar contraseña" required>
                     {{-- BOTONES--}}
                     <div class="buttons-wrapper">
