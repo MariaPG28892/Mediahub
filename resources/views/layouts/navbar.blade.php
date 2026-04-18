@@ -1,6 +1,6 @@
 <nav class="navbar-arcade">
     <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
+        <i class="fas fa-bars"></i>
     </div>
     <div class="navbar-menu">
         <div class="navbar-izquierda">
@@ -25,7 +25,7 @@
         </div>
     </div>
 </nav>
-
+{{--Scripts para el menú hamburguesa--}}
 <script>
 function toggleMenu() {
     document.querySelector('.navbar-menu').classList.toggle('active');
