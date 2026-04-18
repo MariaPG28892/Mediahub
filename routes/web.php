@@ -65,6 +65,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/perfil/editar', [PerfilController::class, 'editar'])->name('editar_perfil');
         Route::put('/perfil/actualizar', [PerfilController::class, 'actualizar'])->name('actualizar_perfil');
         Route::get('/recomendaciones', [PerfilController::class, 'recomendaciones'])->name('recomendaciones');
+        Route::delete('/perfil/eliminar-cuenta', [PerfilController::class, 'eliminarCuenta'])->name('perfil_eliminar');
 
         //PELICULAS
         Route::get('/inicio-peliculas', [PeliculaController::class, 'index'])->name('inicio_peliculas');

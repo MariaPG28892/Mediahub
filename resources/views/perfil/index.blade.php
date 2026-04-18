@@ -200,7 +200,6 @@
         </div>
 
         <div class="perfil-seccion">
-        
         {{--VIDEOJUEGOS--}}
         <div class="cabecera-seccion">
             <h3>Mis videojuegos</h3>
@@ -370,4 +369,12 @@
             <p class="empty-msg">No has escrito reseñas aún</p>
         @endforelse
     </div>
+    <form action="{{ route('perfil_eliminar') }}" method="POST" onsubmit="return confirm('¿Seguro que quieres eliminar tu cuenta? Esta acción no se puede deshacer.')">
+        @csrf
+        @method('DELETE')
+
+        <button type="submit" class="btn-borrar">
+            Eliminar cuenta
+        </button>
+    </form>
 @endsection

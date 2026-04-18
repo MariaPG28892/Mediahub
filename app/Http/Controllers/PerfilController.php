@@ -172,4 +172,24 @@ class PerfilController extends Controller
 
         return view('recomendaciones.index', compact('recomendadas', 'seriesRecomendadas','videojuegosRecomendados'));
     }
+
+    /** Función para eliminar la cuenta del usuario si el quiere*/
+    public function eliminarCuenta()
+    {
+        $usuario = Auth::user();
+
+        // borrar foto si existe
+        if ($usuario->foto && Storage::disk('public')->exists($usuario->foto)) {
+            Storage::disk('public')->delete($usuario->foto);
+        }
+
+        // borrar usuario 
+        $usuario->delete();
+
+        // cerrar sesión
+        Auth::logout();
+
+        return redirect()->route('login')
+            ->with('success', 'Cuenta eliminada correctamente');
+    }
 }
